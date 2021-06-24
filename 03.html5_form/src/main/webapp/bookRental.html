@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+
+	<body align="center">
+		<h2>도서 대여 예약</h2>
+		
+		<form action="result5.html" method="post">
+			<table border="1" align="center" cellspacing="5px" cellspadding="3px">
+				<tr>
+					<td>아이디</td>
+					<td><input type="text" placeholder="UserID" name="memberId" required="required"
+					pattern="[A-Za-z0-9]{6,30}" autofocus="autofocus"></td>
+				</tr>
+				
+				<tr>
+					<td>휴대폰</td>
+					<td><input type="text" placeholder="010-0000-0000" name="mobile" required="required"
+					pattern="[010 | 02]{2,3}-[0-9]{3,4}-[0-9]{3,4}"></td>
+				</tr>
+				
+				<tr>
+					<td>이메일</td>
+					<td><input type = "text" placeholder = "000@0000.000" name = "email" required="required"
+					pattern ="[A-Za-z0-9@.]{6,30}" ></td>
+				</tr>
+				
+				<tr>
+					<td>도서명</td>
+					<td><input type="text" name="bookName" required="required"></td>
+				</tr>
+				
+				<tr>
+					<td>예약권수</td>
+					<td><input type="number" name="rentalNumber" min="1" max="5" required="required"></td>
+				</tr>
+				
+				<tr>
+					<td>예약 희망날짜</td>
+					<td><input type="date" name="rentalDate" value="2021-06-24" required="required"></td>
+				</tr>
+				
+				<tr>
+					<td>도서 수령시간</td>
+					<td><input type="time" name="" min="09:00" max="17:00" required="required"></td>
+				</tr>
+			
+				<tr >
+					<td colspan="2"><input type="submit" value="도서예약"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

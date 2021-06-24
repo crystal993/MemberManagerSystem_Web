@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 FORM 예제</title>
+	</head>
+	
+	<body>
+		<h3>HTML5 FORM</h3>
+		<form action="result5.html" method="get">
+		
+		<table border="1" align="center" cellspacing="5px" cellpadding="3px">
+			
+			<fieldset>
+			<legend>로그인정보</legend>
+			<tr>
+				<!-- 아이디 규칙 : 영문대소문자숫자조합+특수문자@ 최소 6자리 최대 30자리 -->
+				<td>UserId</td> 
+				<td><input type="text" name="memberId" 
+				autofocus="autofocus" 
+				required="required" 
+				style="width:250px;"
+				pattern="[A-Za-z0-9@.]{6,30}">
+				 <input type="submit" value="중복확인"></td>
+			</tr>
+			
+			
+			<tr>
+				<td> Password</td>
+				<td> <input type="password" name="memberPw" value="" 
+				required="required"
+				style="width:250px;"> </td>
+			</tr>
+			
+			<tr>
+				<td>Re Password</td> 
+				<td><input type="password" name="memberPw" value="" 
+				required="required"
+				style="width:250px;"> 
+				<label><input type="checkbox" > 비밀번호 보이기</label></td>
+			</tr>
+			</fieldset>
+			
+			<fieldset>
+			<legend>회원정보</legend>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="name" value="" required="required" style="width:250px;"></td>
+			</tr>
+			
+			<tr>
+				<td> BirthDate </td> 
+				<td> <input type="date" name="birthDate" value="yyyy/mm/dd" required="required" style="width:250px;"></td>
+			</tr>
+			
+			<tr>
+				<td> Mobile </td> 
+				<td><input type="tel"  name="mobile" value="" required="required" 
+				placeholder="숫자만 입력하세요.(01012341234)"
+				style="width:250px;"></td>
+			</tr>
+			
+			<tr>
+				<td> Email </td> 
+				<td> <input type="email" required="required"> <input type="email" required="required">  
+				<select> 
+					<option>직접 선택</option>
+					<option>google</option>
+					<option>naver</option>
+					<option>카카오</option>
+					</select>
+				</td>	 
+			</tr>
+			
+			
+			<tr>
+				<td> 테스트 날짜 </td> 
+				<td><input type="month"  name="mobile" required="required" 
+				placeholder="생년월일" value="2021-05"
+				style="width:250px;"></td>
+			</tr>
+			
+			<tr>
+				<td> 테스트 숫자 </td> 
+				<td><input type="number"  name="mobile" required="required" 
+				placeholder="" 
+				style="width:250px;" min="2" max="10" step="2" value="2"></td>
+			</tr>
+			
+			<tr>
+				<td> 테스트 다중 파일 </td>
+				<td>
+				<input placeholder="파일" type="file" name="test3" multiple="multiple">
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td> 테스트 단일 파일 </td>
+				<td>
+				<input placeholder="파일" type="file" name="test3" >
+				</td>
+			</tr>
+			
+			<tr>
+				<td> 테스트 전화번호(패턴) </td>
+				<td>
+				<input placeholder="파일" type="file" name="test3" >
+				</td>
+			</tr>
+			
+			<tr align="center">
+				<td colspan="2"> 
+					<input type="submit" value="회원가입"> 
+					<input type="submit" value="취소">
+				</td>
+			</tr>
+		</table>
+		
+		</form>
+	</body>
+</html>
