@@ -3,18 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <title>이미지 뷰</title>
+<style type="text/css">
+	/*
+		-- 모든 .jpg 이미지 적용
+		-- img/flower
+		-- flower
+	*/
+	body {
+		text-align: center;	
+	}
+	
+	.top_row {
+		text-align:center;
+	}
+	
+	/* 이미지 크기 */
+	.top_row img[src$=".jpg"] {
+		width: 50px;
+		height: 80px;	
+		border : solid 1px grey;
+		padding : 3px;	
+	}
+	
+	.contents_row {
+		margin: 50px 0px 0px 0px;
+	}
+
+	.row {
+		padding: 2px 0px 0px 0px;
+	}
+	
+		/* 이미지 크기 */
+	.row img[src$=".jpg"] {
+		width: 250px;
+		height: 280px;
+	}
+	
+	/*이미지에 마우스가 왔을 때 처리*/
+	.row img:hover {
+		border: solid 5px purple;
+	}
+	
+	/*이미지를 마우스로 클릭 했을 때*/
+	.row img:active {
+		border: solid 5px blue;
+	}
+	
+	/*이미지를 마우스로 클릭 했을 때*/
+	.row img:visited {
+		border: solid 5px gray;
+	}
+	
+	/*이미지를 마우스로 클릭 했을 때*/
+	.row img:link {
+		border: solid 5px green;
+	}
+	
+	
+</style>
 </head>
 <body>
 	<h3>이미지뷰</h3>
-	<img src="img/image_view1.jpg">
-	<img src="img/image_view2.jpg">
-	<img src="img/image_view3.jpg">
-	<img src="img/image_view4.jpg">
-	<img src="img/image_view5.jpg">
-	<img src="img/image_view6.jpg">
-	<img src="img/image_view7.jpg">
-	<img src="img/image_view8.jpg">
-	<img src="img/image_view9.jpg">
-	<img src="img/image_view10.jpg">
+	
+	<div>
+		<div class="top_row">
+			<img src="img/image_view1.jpg">
+			<img src="img/image_view2.jpg">
+			<img src="img/image_view3.jpg">
+			<img src="img/image_view4.jpg">
+			<img src="img/image_view5.jpg">
+			<img src="img/image_view6.jpg">
+			<img src="img/image_view7.jpg">
+			<img src="img/image_view8.jpg">
+			<img src="img/image_view9.jpg">
+			<img src="img/image_view10.jpg">
+		</div>
+	
+		<div class="contents_row">
+			<div class="row">
+				<img src="img/image_view1.jpg">
+				<img src="img/image_view2.jpg">
+				<img src="img/image_view3.jpg">
+				<img src="img/image_view4.jpg">
+				<img src="img/image_view5.jpg">
+			</div>
+			
+			<div class="row">
+				<img src="img/image_view6.jpg">
+				<img src="img/image_view7.jpg">
+				<img src="img/image_view8.jpg">
+				<img src="img/image_view9.jpg">
+				<img src="img/image_view10.jpg">
+			</div>
+		</div>	
+	</div>
+	
 </body>
 </html>
