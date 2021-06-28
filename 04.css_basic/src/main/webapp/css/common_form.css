@@ -31,6 +31,12 @@ span.input_label {
 }
 
 
+span.input_row {
+	display: inline-block;
+	width: 150px;
+}
+
+
 
 
 

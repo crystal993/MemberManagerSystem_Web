@@ -3,30 +3,42 @@
 /* common.css : 공통 */
 
 /* a */
+
 a:link {text-decoration: none;}
 a:active {text-decoration: underline; color: pink;}
 a:visited {text-decoration: none; color:gray;}
-a:hover {text-decoration: none; background-color: #AFAFAF; color: 
+a:hover {text-decoration: none; background-color: #DDDCE0; color: 
 #AB72EE;}
-
+	
 a {
 	text-decoration: none;
 	color:orange;
 	font-weight: bold;
 }
 
+span.seperator {
+	margin: 0 3px;
+	font-size: 0.7em;
+	color: navy;
+}
+
 
 /* page title */
-
-
-/* page title */
-
 
 /* logo image */
 
+
+
 /* top_menu area */
 
+div.top_menu {
+	text-align: right;
+}
 
+div.top_menu a {
+	text-decoration : none;
+	font-size:11px;
+}
 
 /* ul, ol 목록 수평 배치 */
 ul.menu_item_2, ol.menu_item_2 { 
