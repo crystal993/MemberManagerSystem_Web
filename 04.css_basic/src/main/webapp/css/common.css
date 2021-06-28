@@ -20,5 +20,8 @@ ul.menu_item_1 li, ol.menu_item_1 li {
 	font-size: 12px;
 }
 
-
+/* ul li, ol li 맨 마지막 항목은 밑줄 제거*/
+ul.menu_item_1 li:last-child, ol.menu_item_1 li:last-child {
+	border-bottom: 0px;
+}
 
