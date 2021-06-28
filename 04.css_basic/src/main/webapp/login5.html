@@ -5,6 +5,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Login | MMS</title>
 		
+		<!-- css : external  -->
+		<link type="text/css" rel="stylesheet" href="css/common_form.css">		
+		
 		<!-- css : internal  -->
 		<style type="text/css">
 			table, tr, td, th {
@@ -46,6 +49,8 @@
 			a:visited {text-decoration: none; color:gray;}
 			a:hover {text-decoration: none; background-color: yellow; color: red;}
 			
+			
+			
 		</style>
 	</head>
 	
@@ -67,7 +72,7 @@
 			<table class="form_table">
 				<tr>
 					<td>UserId</td> 
-					<td><input type="text" name="memberId"></td>
+					<td><input type="text" name="memberId" autofocus="autofocus"></td>
 				</tr>
 				
 				<tr>	
@@ -77,18 +82,13 @@
 				
 				<tr>
 					<td colspan="2" align="center">
-						<input type="submit" value="로그인">
-						<input type="reset" value="취소">
+						<input type="submit" value="로그인" class="btn_submit normal">
+						<input type="reset" value="취소" class="normal">
 					</td>	
 				</tr>
 			</table>	
 		</form>
-		
-		
-		<a href="#" >메뉴1</a>
-		<a href="#" >메뉴2</a>
-		<a href="#" >메뉴3</a>
-		<a href="#" >메뉴4</a>		
+			
 		
 	</body>
 </html>
