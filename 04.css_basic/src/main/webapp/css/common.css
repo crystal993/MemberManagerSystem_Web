@@ -28,5 +28,8 @@ ul.menu_item_1 li:last-child, ol.menu_item_1 li:last-child {
 /* ul li, ol li 항목 앞에 > 아이콘으로 사용*/
 ul.menu_item_1 li:before, ol.menu_item_1 li:before {
 	content: "> ";
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 5px 6px 0;
 }
 
