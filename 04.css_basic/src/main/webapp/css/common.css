@@ -2,11 +2,24 @@
 
 /* common.css : 공통 */
 
-/* ul, ol 아이템 목록 : 기존 property 제거 */
+/* ul, ol 목록 수평 배치 */
+ul.menu_item_2, ol.menu_item_2 { 
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
 
+ul.menu_item_2 li, ol.menu_item_2 li {
+	/* display:inline; */
+	float:left;
+}
+
+ul.menu_item_2 li:before, ol.menu_item_2 li:before {
+}
+
+/* ul, ol 아이템 목록 : 기존 property 제거 */
 ul.menu_item_1, ol.menu_item_1 {
 	list-style: none;
-	padding: 5px 0 5px 5px;
 	margin: 0px;
 	padding: 0px;
 }
