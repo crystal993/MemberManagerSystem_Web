@@ -2,7 +2,7 @@
 
 /* common.css : 공통 */
 
-/* ul, ol 아이템 목록 */
+/* ul, ol 아이템 목록 : 기존 property 제거 */
 
 ul.menu_item_1, ol.menu_item_1 {
 	list-style: none;
@@ -16,12 +16,17 @@ ul.menu_item_1 li, ol.menu_item_1 li {
 	list-style: none;
 	padding: 5px 0 5px 5px;
 	margin-bottom: 5px;
-	border-bottom: solid 1px #efefef;
+	border-bottom: dotted 1px #efefef;
 	font-size: 12px;
 }
 
 /* ul li, ol li 맨 마지막 항목은 밑줄 제거*/
 ul.menu_item_1 li:last-child, ol.menu_item_1 li:last-child {
 	border-bottom: 0px;
+}
+
+/* ul li, ol li 항목 앞에 > 아이콘으로 사용*/
+ul.menu_item_1 li:before, ol.menu_item_1 li:before {
+	content: "> ";
 }
 
