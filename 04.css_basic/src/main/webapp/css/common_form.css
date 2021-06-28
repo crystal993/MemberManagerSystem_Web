@@ -23,3 +23,18 @@ input[type="email"]:focus, input[type="checkbox"]:focus {
 	background: pink;
 }
 
+/* 테이블 없이 form 사용하기 */
+span.input_label {
+	display: inline-block;
+	width: 150px;
+	background-color: #EBB4F6;
+}
+
+
+
+
+
+
+
+
+

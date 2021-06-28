@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<!-- css External -->
+		<link type="text/css" rel="stylesheet" href="css/common_form.css">
+	</head>
+	
+	<body align="center">
+		<a href="index5.html"><img src="img/crystal.png"></a>
+		<h3 align="center"> Member Manage System </h3>
+		
+		<hr>
+		<a href="login5.html">Login</a> | 
+		<a href="join5.html">Sign Up</a> | 
+		<a href="findMember5.html">Find ID/PW</a>
+		<hr>
+		
+		<h1>Find ID</h1>
+		<form action="result.html" method="post">
+			  
+			  <!-- 이름 -->
+			  <div>
+				  <span class="input_label">Name </span>   
+				  <input type="text" name="name">  
+			  </div>
+			   
+			   <!-- 휴대폰 -->
+			   <div>
+				   <span class="input_label">Mobile</span>   
+				   <input type="password" name="mobile">  
+			   </div>
+			   
+			   <!-- 이메일 -->
+			   <div>
+				   <span class="input_label">Email</span>   
+				   <input type="password" name="email">  
+			   </div>
+			   
+			 	<!-- 전송 버튼 -->
+			 	<input type="submit" value="아이디 찾기"> 
+		</form>
+		
+		<br>
+		
+		<h1>Find PW</h1>
+		<form action="result.html" method="post">
+			<table border="1" cellspacing="5px" cellpadding="3px" align="center">
+			<tr>
+			<td> UserId </td>  
+			<td> <input type="text" name="name"> </td>
+			</tr>
+			
+			<tr>
+			 <td> Name </td> 
+			 <td> <input type="text" name="mobile"> </td>
+			</tr>
+			
+			<tr>
+			 <td> Mobile </td> 
+			 <td> <input type="password" name="mobile"> </td>
+			</tr>
+			
+			<tr>
+			<td></td>
+			<td><input type="submit" value="비밀번호 찾기"></td>
+			</tr>
+			</table>
+		
+		</form>
+	</body>
+</html>
