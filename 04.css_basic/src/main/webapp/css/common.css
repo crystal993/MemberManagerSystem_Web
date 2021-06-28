@@ -7,14 +7,20 @@ ul.menu_item_2, ol.menu_item_2 {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
+	border-bottom: dotted 1px #efefef;
 }
 
 ul.menu_item_2 li, ol.menu_item_2 li {
-	/* display:inline; */
-	float:left;
+	display:inline; 
+	font-size: 9px;
+	margin-right: 5px;
+	border: solid 1px #efefef;
+	padding: 5px;
+	background-color: #EBB4F6;
 }
 
 ul.menu_item_2 li:before, ol.menu_item_2 li:before {
+	content: "★ ";
 }
 
 /* ul, ol 아이템 목록 : 기존 property 제거 */
