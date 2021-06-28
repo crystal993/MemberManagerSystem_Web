@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Login | MMS</title>
+		
+		<!-- css : external  -->
+		<link type="text/css" rel="stylesheet" href="css/common_form.css">		
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+	</head>
+	
+	<body>
+		<!-- logo menu -->
+		<a href="index.html"><img src="img/logo.png"></a>
+		<h3 align="center"> Member Manager System </h3>
+		
+		<!-- top menu -->
+		<div class="top_menu">
+				<a href="login5.html">Login</a> <span class="seperator"> | </span>
+				<a href="join5.html">Sign Up</a> <span class="seperator"> | </span>
+				<a href="findMember5.html">Find ID/PW</a>
+		</div>
+		<hr>
+		
+		<!-- 컨텐츠 제목 -->
+		<h1>Login</h1>
+		<form action="result5.html" method="post" >
+		
+			<!-- 아이디 -->
+			<div class="input_row">	
+				<span class="input_row">UserId</span> 
+				<input type="text" name="memberId" autofocus="autofocus">
+			</div>		
+			
+			<!-- 비밀번호 -->
+			<div class="input_row">	
+			<span class="input_row"> Password </span>
+			<input type="password" name="memberPw">
+			</div>
+					
+			<input class ="btn_submit" type="submit" value="로그인" class="btn_submit normal">
+			<input class ="input_normal" type="reset" value="취소" class="normal">
+		</form>
+		
+		
+		<!-- footer menu -->
+		<div class="footer_menu">
+		
+		</div>	
+		
+	</body>
+</html>

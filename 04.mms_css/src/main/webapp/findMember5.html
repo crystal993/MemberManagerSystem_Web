@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Find Id/Pw | MMS</title>
+		
+		<!-- css : external -->
+		<link type="text/css" rel="stylesheet" href="css/common_form.css">		
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+	</head>
+	
+	<body>
+		<!-- logo menu -->
+		<a href="index.html"><img src="img/logo.png"></a>
+		<h3 align="center"> Member Manager System </h3>
+		
+		<!-- top menu -->
+		<div class="top_menu">
+				<a href="login5.html">Login</a> <span class="seperator"> | </span>
+				<a href="join5.html">Sign Up</a> <span class="seperator"> | </span>
+				<a href="findMember5.html">Find ID/PW</a>
+		</div>
+		<hr>
+		
+		<!-- 컨텐츠 제목 -->
+		
+		
+		<!-- 컨텐츠 -->
+		
+		<h1>Find ID</h1>
+		<form action="result.html" method="post">
+			  
+			  <!-- 이름 -->
+			  <div>
+				  <span class="input_label">Name </span>   
+				  <input type="text" name="name">  
+			  </div>
+			   
+			   <!-- 휴대폰 -->
+			   <div>
+				   <span class="input_label">Mobile</span>   
+				   <input type="password" name="mobile">  
+			   </div>
+			   
+			   <!-- 이메일 -->
+			   <div>
+				   <span class="input_label">Email</span>   
+				   <input type="password" name="email">  
+			   </div>
+			   
+			 	<!-- 전송 버튼 -->
+			 	<input type="submit" value="아이디 찾기"> 
+		</form>
+		
+		<br>
+		
+		<h1>Find PW</h1>
+		<form action="result.html" method="post">
+			<table border="1" cellspacing="5px" cellpadding="3px" align="center">
+			<tr>
+			<td> UserId </td>  
+			<td> <input type="text" name="name"> </td>
+			</tr>
+			
+			<tr>
+			 <td> Name </td> 
+			 <td> <input type="text" name="mobile"> </td>
+			</tr>
+			
+			<tr>
+			 <td> Mobile </td> 
+			 <td> <input type="password" name="mobile"> </td>
+			</tr>
+			
+			<tr>
+			<td></td>
+			<td><input type="submit" value="비밀번호 찾기"></td>
+			</tr>
+			</table>
+		
+		</form>
+		
+		<!-- footer menu -->
+		<div class="footer_menu">
+		
+		</div>
+	</body>
+</html>

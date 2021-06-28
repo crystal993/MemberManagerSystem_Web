@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+
+/* form 양식 css: css/common_form.css */
+
+
+input.btn_submit {
+	color: #fff;
+}
+
+
+
+input.normal {
+	border-radius : 5px;
+	background-color: pink;
+	width : 40%;
+}
+
+/* 입력항목에 포커스가 올때 배경색 변경 */
+input[type="text"]:focus, input[type="password"]:focus, 
+textarea:focus, input[type="tel"]:focus, 
+input[type="email"]:focus, input[type="checkbox"]:focus {
+	background: pink;
+}
+
+/* 테이블 없이 form 사용하기 */
+span.input_label {
+	display: inline-block;
+	width: 150px;
+	background-color: #EBB4F6;
+}
+
+
+span.input_row {
+	display: inline-block;
+	width: 150px;
+}
+
+
+
+
+
+
+
+
+
