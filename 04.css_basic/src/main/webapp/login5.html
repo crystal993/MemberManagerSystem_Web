@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Login | MMS</title>
+		
+		<!-- css : internal  -->
+		<style type="text/css">
+			table, tr, td, th {
+				border: solid 1px navy;
+				margin: 5px;
+				padding: 5px;
+			
+			}
+			
+			div.top_menu {
+				text-align: right;
+			}
+		</style>
+	</head>
+	
+	<body align="center">
+		<a href="index5.html"><img src="img/crystal.png"></a>
+		<body align="center">
+		<h3 align="center"> Member Manage System </h3>
+		
+		<hr>
+		<div class="top_menu">
+			<a href="login5.html">Login</a> | 
+			<a href="join5.html">Sign Up</a> | 
+			<a href="findMember5.html">Find ID/PW</a>
+		</div>
+		<hr>
+		
+		<h1>Login</h1>
+		<form action="result5.html" method="post" >
+			<table class="form_table">
+				<tr>
+					<td>UserId</td> 
+					<td><input type="text" name="memberId"></td>
+				</tr>
+				
+				<tr>	
+					<td> Password</td>
+					<td><input type="password" name="memberPw"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="로그인">
+						<input type="reset" value="취소">
+					</td>	
+				</tr>
+			</table>	
+		</form>
+	</body>
+</html>
