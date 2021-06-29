@@ -24,13 +24,14 @@
 			var sum = 0;
 			
 			document.write("1~ 10 까지 출력\n")
+			document.write("<ul>")
 			for(i = 1 ; i <= 10 ; i++) 
-			{
+			{	sum += i
+				document.write("<li>")
 				document.write(i)
-				document.write(" ")
-				sum += i
+				document.write("</li>")
 			}
-			document.write("\n")
+			document.write("</ul>")
 			document.write("합계 : "+sum)
 			
 		</script>
