@@ -6,7 +6,7 @@
 <!-- js: internal -->
 <script type="text/javascript">
 	
-	/* 사용자 주문수량 입력받아서 주문내역 출력 
+	/* 주문처리 : 사용자 주문수량 입력받아서 주문내역 출력 
 		상품 가격 : 10,000
 		주문 수량 : 1 ~ 10개 제한  
 		
@@ -31,31 +31,47 @@
 		7. 주문취소처리
 	*/
 	
-	var num = prompt("입력을 받았습니다.")
-	var check = isNaN(num)
+	/* 상품 가격 */
+	var price = 10000;
 	
-	if(!check) {
-		var buyNum = parseInt(num)
-		
-		if(buyNum >= 1 && buyNum <= 10) {
+	/* 주문 수량 입력받기 */
+	var quantity = prompt("주문수량 입력하세요.","")
+	console.log("주문 수량 : " + quantity)
+	// 값이 잘 입력됐는지 로그로 콘솔에서 확인 가능
+	console.log("데이터 타입 : " + typeof quantity)
 	
-			total = 10000*buyNum
-			
-			document.write("<ul>")
-			document.write("<li>상품 가격 : 10000 원</li>")
-			document.write("<li>주문 수량 : " + buyNum + " 개</li>")
-			document.write("<li>총 가격 : " + total + " 원</li>")
-			document.write("</ul>")
-			buyCheck = confirm("상품을 주문하시겠습니까?")
-			
-			if(buyCheck){
-				alert("주문 성공")
-			} else {
-				alert("주문 취소")
-			}
+	
+	if (quantity != "") {
+		if (isNaN(quantity)) {
+			alert("[오류] 주문 수량은 숫자로 입력하시기 바랍니다.")
 		} else {
-			document.write("[오류] 주문 개수 범위는 1 ~ 10 개입니다.")
+			
+			if(parseInt(quantity) >= 1 && parseInt(quantity) <= 10) {
+				var orderPrice = price * parseInt(quantity);
+				console.log("orderPrice : " + orderPrice)
+				
+				// var message; // 변수만 선언하면 undefined
+				var message = ""; // 해결 : undefined 주문내역정보 문제 => 주문내역정보
+				message += "주문내역정보"; // undefined 주문내역정보 문제
+				message += ("\n상품 가격 : " + price);
+				message += ("\n주문 수량 : " + quantity);
+				message += ("\n주문 총액 : " + orderPrice);
+				message += ("\n-------------------------");
+				message += ("\n주문 하시겠습니까?");
+				
+				var isOrder = confirm(message);
+				
+				if(isOrder) { 
+					document.write("[주문 완료되었습니다.]")
+				} else {
+					document.write("[주문 취소되었습니다.]")
+				}
+			} else {
+				alert("[오류] 주문 수량은 1 ~ 10 이내로 입력하시기 바랍니다.\n 현재 입력된 주문수량 : "+quantity)
+			}
 		}
+	} else {
+		alert("[오류] 주문수량을 입력하시기 바랍니다.")
 	}
 	
 </script>
