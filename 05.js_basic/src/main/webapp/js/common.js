@@ -1,0 +1,5 @@
+/**
+ * 공통 자바스크립트 파일 : js/common.js 
+ */
+
+alert("common.js load")
