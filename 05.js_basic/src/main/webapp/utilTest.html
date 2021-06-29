@@ -3,11 +3,23 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>외부 자바스크립트 사용</title>
-		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common.js">
+		</script>
 	
+		<script type="text/javascript">
+			var currentDate = getCurrentDate();
+			document.write("<h3> 현재날짜 : " + currentDate + "</h3>")
+		</script>
+	
+		<style type="text/css">
+				table, tr, td, th {
+				border : solid 1px;
+			}
+		</style>
 	</head>
 
 	<body>
 		<h3>외부 자바스크립트 사용</h3>
+		
 	</body>
 </html>
