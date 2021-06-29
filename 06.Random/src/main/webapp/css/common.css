@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+}
+
+div.title, div.sub-title {
+	font-weight : bold;
+}
+
+div.sub-title {
+	margin-top : 150px;
+}
+
+div.header {
+	margin-top : 20px;
+}
+
+div.contents {
+	margin-top : 20px;
+}
+
+div.draw-submit {
+	margin-top : 10px;
+}
