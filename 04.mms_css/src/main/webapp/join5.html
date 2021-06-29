@@ -29,51 +29,51 @@
 		<!-- 컨텐츠 -->
 		<form action="" method="">
 		
-		<table border="1" align="center" cellspacing="5px" cellpadding="3px">
+				<!-- 아이디 -->
+				<div class="input_row">	
+					<span class="input_row">UserId</span> 
+					<input type="text" name="memberId" autofocus="autofocus">
+				</div>		
+				
+				<!-- 비밀번호 -->
+				<div class="input_row">	
+				<span class="input_row"> Password </span>
+				<input type="password" name="memberPw">
+				</div>
 			
-			<tr>
-				<td>UserId</td> 
-				<td><input type="text" name="memberId" autofocus="autofocus"></td> 
-				<td> <input type="submit" value="중복확인"></td>
-			</tr>
+				<!-- 비밀번호 재입력 -->
+				<div class="input_row">
+				<span class="input_row">Re Password</span> 
+				<input type="password" name="memberPw" >
+				<label><input type="checkbox" > 비밀번호 보이기</label>
+				</div>
 			
-			<tr>
-				<td> Password</td>
-				<td> <input type="password" name="memberPw" > </td>
-			</tr>
+				<!-- 이름 -->
+				<div class="input_row">
+				<span class="input_row">Name</span>
+				<input type="text" name="name"  >
+				</div>
 			
-			<tr>
-				<td>Re Password</td> 
-				<td><input type="password" name="memberPw" > </td>
-				<td><label><input type="checkbox" > 비밀번호 보이기</label></td>
-			</tr>
-			
-			<tr>
-				<td>Name</td>
-				<td><input type="text" name="name"  ></td>
-			</tr>
-			
-			<tr>
-				<td> Mobile </td> 
+				<!-- 휴대폰 -->
+				<div class="input_row">
+				<span class="input_row"> Mobile </span>
 				<td><input type="tel" placeholder="000-0000-0000" name="mobile" ></td>
-			</tr>
+				</div>
 			
-			<tr>
-				<td> Email </td> 
-				<td> <input type="email" > <input type="email" > </td>
-				<td> <select> 
-					<option>직접 선택</option>
-					<option>google</option>
-					<option>naver</option>
-					<option>카카오</option>
-					</select>
-				</td>	 
-			</tr>
-			<tr>
-				<td></td>
-				<td> <input type="submit" value="회원가입" class="btn_submit normal"> </td>
-			</tr>
-		</table>
+				<!-- 이메일 -->
+				<div class="input_row">
+					<span class="input_row"> Email </span> 
+					<input type="email" > <input type="email" > 
+						<select> 
+							<option>직접 선택</option>
+							<option>google</option>
+							<option>naver</option>
+							<option>카카오</option>
+						</select>
+				</div>
+				
+				<!-- submit -->
+				<input type="submit" value="회원가입" class="btn_submit normal"> 
 		</form>
 		
 		<!-- footer menu -->

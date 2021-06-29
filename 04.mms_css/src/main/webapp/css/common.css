@@ -4,8 +4,12 @@
 
 body {
 	text-align : center;
+	background-color : #ffffff;
 }
 
+#main {
+	background-color : F7F7F8;
+}	
 
 /* a */
 
