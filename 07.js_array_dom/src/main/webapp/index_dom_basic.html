@@ -17,13 +17,13 @@
 			console.log("html>> ", html);
 			
 			// html 동적 변경
-			takeElement.innerHTML = "<h1 style='color:red;background-color:yellow;'>여러분 파이팅!!</h1>"
+			//takeElement.innerHTML = "<h1 style='color:red;background-color:yellow;'>여러분 파이팅!!</h1>"
 		
 			// 아이디 입력항목 객체 가져오기
-			var memberIdElement = document.sampleForm.memberId;
+			//var memberIdElement = document.sampleForm.memberId;
 			
 			// 아이디 객체 포커스 위치시키기 : html5 속성 - autofocus = "autofocus"
-			memberIdElement.focus();
+			//memberIdElement.focus();
 		}	
 		
 		function titleHidden() {
@@ -42,23 +42,38 @@
 			takeTitleElement.style.visibility = "visible";
 		}
 		
+		// 배열이용, 배열에 색상을 다 넣어놓음, 랜덤함수로 가능.
 		function titleVisibleRandomColor() {
+			//제목 엘리먼트 객체 가져오기
+			var takeTitleElement = document.getElementById("title_1");
+			
+			var colors = ["#0000FF","#0000CD","#0000CD","#ffffff","chocolate"];
+			var min = 0;
+			var max = colors.length;
+			
+			var randomColor1 = colors[parseInt(getRandomArbitrary(min, max))];
+			var randomColor2 = colors[parseInt(getRandomArbitrary(min, max))];
+			
+			takeTitleElement.style.backgroundColor = randomColor1;
+			takeTitleElement.style.color = randomColor2;
+		}
+		
+		
+		function getRandomArbitrary(min, max) {
+			  return Math.random() * (max - min) + min;
 		}
 		
 		</script>
 	</head>
 	
 	<body>
+	
 		<button onclick="titleHidden()">제목감추기</button>
 		<button onclick="titleVisible()">제목보이기</button>
 		<button onclick="titleVisibleRandomColor()">제목보이기 랜덤 색상 변경</button>
 		
-		<h3 id = "title_1">DOM API basic</h3>
-		<form action="#" method="get" names="sampleForm" id="sampleForm">
-			<div> 아이디 : <input type="text" name="memberId"> </div>
-			<div> 이름 : <input type="text" name="name"> </div>
-			<div> 마일리지 : <input type="text" name="mileage"> </div>
-			<div><input type="submit" value="확인"> </div>
-		</form>
+		<h3 id = "title_1" style='color:red;background-color:yellow;' >DOM API basic</h3>
+		
+			
 	</body>
 </html>
