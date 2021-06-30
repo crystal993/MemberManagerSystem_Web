@@ -12,8 +12,12 @@
 			var takeElement = document.getElementById("title_1");
 			console.log(typeof(takeElement));
 			
+			// html 내용을 조회 
 			var html = takeElement.innerHTML;
 			console.log("html>> ", html);
+			
+			// html 동적 변경
+			takeElement.innerHTML = "<h1 style='color:red;background-color:yellow;'>여러분 파이팅!!</h1>"
 		}	
 		</script>
 	</head>
