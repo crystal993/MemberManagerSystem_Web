@@ -25,13 +25,26 @@
 			// 아이디 객체 포커스 위치시키기 : html5 속성 - autofocus = "autofocus"
 			memberIdElement.focus();
 		}	
+		
+		function titleHidden() {
+			alert('제목 감추기')
+		}
+		
+		function titleVisible() {
+			alert('제목 보이기')
+		}
+		
+		function titleVisibleRandomColor() {
+			alert('제목 보이기 랜덤 색상 변경')
+		}
+		
 		</script>
 	</head>
 	
 	<body>
-		<button onclick="alert('제목 감추기')">제목감추기</button>
-		<button onclick="alert('제목 보이기')">제목보이기</button>
-		<button onclick="alert('제목 보이기 랜덤 색상 변경')">제목보이기 랜덤 색상 변경</button>
+		<button onclick="titleHidden()">제목감추기</button>
+		<button onclick="titleVisible()">제목보이기</button>
+		<button onclick="titleVisibleRandomColor()">제목보이기 랜덤 색상 변경</button>
 		
 		<h3 id = "title_1">DOM API basic</h3>
 		<form action="#" method="get" names="sampleForm" id="sampleForm">
