@@ -6,10 +6,22 @@
 		
 		<!-- js : external -->
 		<script type="text/javascript" src="js/common.js"></script>
-		<script type="text/javascript" src="js/user_object_method_function.js"></script>
+		<!-- <script type="text/javascript" src="js/user_object_method_function.js"></script> -->
 		<script type="text/javascript" src="js/user_object_method_prototypes.js"></script>
 		
+		<!-- js : internal -->
+		<script type="text/javascript">
+			
+			// Member 객체 생성
+			var dto1 = new Member("user01", "홍길동", 1000);
+				
+			// Member 객체 마일리지 변경
+			dto1.setMileage(5000);
+			
+			//  Member 객체 정보 출력
+			document.write("<div>" + dto1.toString() + "</div>");
 		
+		</script>
 	</head>
 	
 	<body>
