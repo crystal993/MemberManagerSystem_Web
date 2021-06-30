@@ -18,11 +18,23 @@
 			
 			// html 동적 변경
 			takeElement.innerHTML = "<h1 style='color:red;background-color:yellow;'>여러분 파이팅!!</h1>"
+		
+			// 아이디 입력항목 객체 가져오기
+			var memberIdElement = document.sampleForm.memberId;
+			
+			// 아이디 객체 포커스 위치시키기 : html5 속성 - autofocus = "autofocus"
+			memberIdElement.focus();
 		}	
 		</script>
 	</head>
 	
 	<body>
 		<h3 id = "title_1">DOM API basic</h3>
+		<form action="#" method="get" names="sampleForm" id="sampleForm">
+			<div> 아이디 : <input type="text" name="memberId"> </div>
+			<div> 이름 : <input type="text" name="name"> </div>
+			<div> 마일리지 : <input type="text" name="mileage"> </div>
+			<div><input type="submit" value="확인"> </div>
+		</form>
 	</body>
 </html>
