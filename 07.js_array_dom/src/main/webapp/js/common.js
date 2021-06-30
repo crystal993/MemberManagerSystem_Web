@@ -2,20 +2,6 @@
  * 공통 자바스크립트 파일 : js/common.js 
  */
 
-/**
-getYear() 
-1970년 이후의 연도  정보를 알려줍니다.
-
-getFullYear() 
-연도 정보를 열려줍니다. 
-
-getMonth() 
-월(月)  정보를 알려줍니다. 1월부터 순서대로 0,1,...순으로 표시됩니다.
-
-getDate() 
-일(日) 정보를 알려줍니다.
-
- */
 
 
 /* 현재 날짜 년도4자리-월2자리-일2자리 기본형식의 날짜 반환 함수 
@@ -53,5 +39,17 @@ function getCurrentTime() {
 	return hours + ":" + minutes + ":" + seconds;
 }
 
+/*현재 요일 반환 함수 
+	-- 일요일 월요일 화요일 .. 토요일 
+	-- 배열 응용
+	Date.getDay()
+*/
 
+function getCurrentDay() {
+	var currentDay = new Date();
+	var days = new Array("일요일","월요일","화요일","수요일","목요일","금요일","토요일");
+	var dayIndex = currentDay.getDay();
+			
+	return days[dayIndex];
+} 
 
