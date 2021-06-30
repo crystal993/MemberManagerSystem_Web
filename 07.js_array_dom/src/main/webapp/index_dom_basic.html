@@ -27,15 +27,22 @@
 		}	
 		
 		function titleHidden() {
-			alert('제목 감추기')
+			// 제목 엘리먼트 객체 가져오기
+			var takeTitleElement = document.getElementById("title_1");
+			
+			// 제목 감추기 : css 이용  >>   element객체.style.propertyName = "new-value"
+			takeTitleElement.style.visibility = "hidden";
 		}
 		
 		function titleVisible() {
-			alert('제목 보이기')
+			// 제목 엘리먼트 객체 가져오기
+			var takeTitleElement = document.getElementById("title_1");
+			
+			// 제목 보이기 : css 이용 >>   element객체.style.propertyName = "new-value"
+			takeTitleElement.style.visibility = "visible";
 		}
 		
 		function titleVisibleRandomColor() {
-			alert('제목 보이기 랜덤 색상 변경')
 		}
 		
 		</script>
