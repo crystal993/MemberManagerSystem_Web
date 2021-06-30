@@ -40,14 +40,14 @@ function getCurrentTime() {
 }
 
 /*현재 요일 반환 함수 
-	-- 일요일 월요일 화요일 .. 토요일 
+	-- 일요일(0) 월요일(1) 화요일(2) .. 토요일 
 	-- 배열 응용
 	Date.getDay()
 */
 
 function getCurrentDay() {
 	var currentDay = new Date();
-	var days = new Array("일요일","월요일","화요일","수요일","목요일","금요일","토요일");
+	var days = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
 	var dayIndex = currentDay.getDay();
 			
 	return days[dayIndex];
