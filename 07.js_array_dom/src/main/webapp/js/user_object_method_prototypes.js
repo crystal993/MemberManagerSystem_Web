@@ -1,5 +1,5 @@
 /**
- * 2. 사용자 클래스에 멤버메서드 선언 및 prototype 사용 방법
+ * 3. 사용자 클래스에 멤버메서드 선언 및 prototype 및 json 사용 방법
  */
 
 /* 회원 클래스 선언 */
@@ -23,3 +23,6 @@ Member.prototype.setMileage = function(mileage) {
 Member.prototype.getMileage = function(mileage) {
 	return this.mileage;
 }
+
+
+
