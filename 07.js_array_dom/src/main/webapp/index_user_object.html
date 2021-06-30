@@ -16,6 +16,18 @@
 				this.memberId = memberId;
 				this.name = name;
 				this.mileage = mileage;
+				
+				
+				this.toString = toString;
+				
+				//회원의 전체 정보를 반환하는 멤버메서드 바인딩 연결 선언 
+				this.getMember = getMember;
+				
+				//회원의 마일리지 변경하는 멤버메서드 바인딩 연결 선언
+				this.setMileage = setMileage;
+				
+				//회원의 마일리지 반환하는 멤버메서드 바인딩 연결 선언
+				this.getMileage = getMileage;
 			}
 			
 			/* 회원 객체 생성 */
@@ -26,6 +38,30 @@
 			document.write("<div>" + dto1.memberId + ", " + dto1.name + ", " + dto1.mileage + "</div>");
 			document.write("<div>" + dto2.memberId + ", " + dto2.name + ", " + dto2.mileage + "</div>");
 		
+			/* 회원 클래스의 바인딩 위한 함수 선언 */
+			function toString(dto) {
+				return document.write("<div>" + dto.memberId + ", " + dto.name + ", " + dto.mileage + "</div>");
+			}
+			
+			/* 회원 객체 멤버메서드 이용해서 정보출력, 마일리지 변경, 마일리지 조회 사용 */
+			function getMember(dto) {
+				return toString(dto);
+			}
+			
+			function setMileage(dto, mileage) {
+				dto.mileage = mileage;
+			}
+			
+			function getMileage(dto) {
+				return dto.mileage;
+			}
+			
+			getMember(dto1);
+			
+			setMileage(dto1, 500);
+			getMileage(dto1);
+			getMember(dto1);
+			
 		</script>
 
 	</head>
