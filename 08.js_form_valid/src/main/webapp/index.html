@@ -90,6 +90,29 @@
 					return false; // input type="submit"
 				}
 			}
+				/*	비밀번호 표시: 보이기 / 감추기 이벤트
+					1. 비밀번호표시 체크박스 객체 가져오기
+					2. 비밀번호 객체 가져오기 
+					3. 비밀번호 확인 객체 가져오기
+					
+					4. 체크박스가 체킹(checked == true)
+						=> type='text'
+					5. 체크박스 해제 (checked == false)
+						=> type='password'
+				*/	
+				function viewMemberPw() {
+					var isVisiblePasswordElement = document.getElementById("isVisiblePassword");
+					var memberPwElement = document.getElementById("memberPw");
+					var memberPwConfirmElement = document.getElementById("memberPwConfirm");
+					
+					if(isVisiblePasswordElement.checked) {
+						memberPwElement.type = "text";
+						memberPwConfirmElement.type = "text";
+					} else {
+						memberPwElement.type = "password";
+						memberPwConfirmElement.type = "password";
+					}
+				}
 			
 		</script>
 		
@@ -128,7 +151,7 @@
 					<div class="">
 						<div class="input_title">Re Password</div> 
 						<input type="password" name="memberPwConfirm" id="memberPwConfirm">
-						<label><input type="checkbox" > 비밀번호 보이기</label>
+						<label><input type="checkbox" name="isVisiblePassword" id="isVisiblePassword" onclick="viewMemberPw()">비밀번호 표시</label>
 						<span id="memberPwConfirmMsg"></span>
 					</div>
 				
