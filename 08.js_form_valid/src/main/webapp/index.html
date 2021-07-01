@@ -203,6 +203,11 @@
 						}
 					}
 				}
+				/*자기 소개 textarea 입력 길이 출력 */
+				function introLengthCheck(takeData) {
+					var introLengthElement = document.getElementById("introLength");
+					introLengthElement.innerHTML = takeData.length;
+				}
 		</script>
 		
 	</head>
@@ -223,9 +228,10 @@
 		 <div>
 		 	<form action="result.html" method="post" name="joinForm" id="joinForm">
 						<!-- 아이디 -->
-					<div class="">	
+					<div>	
 						<div class="input_title">UserId</div> 
 						<input type="text" name="memberId" id="memberId" autofocus="autofocus" maxlength="5">
+						<input type="button" name="" value="아이디 중복">
 						<span id="memberIdMsg"></span>
 					</div>		
 					
@@ -289,8 +295,9 @@
 					<!-- 자기소개 -->
 					<div>
 						<div class="input_title">자기소개(200자 이내 입력)</div>
+						<div id="introLength">0</div>
 						<div>
-							<textarea cols="60" rows="intro" name="intro"></textarea>					
+							<textarea cols="60" rows="intro" name="intro" id="intro" onkeyDown="introLengthCheck(this.value)"></textarea>					
 						</div>
 					</div>
 					
