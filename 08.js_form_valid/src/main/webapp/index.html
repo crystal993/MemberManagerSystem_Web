@@ -10,8 +10,81 @@
 		
 		
 		<script type="text/javascript">
+			/*윈도우 로드 이벤트 함수*/
+			window.onload = function() {
+				initform();
+			}
 			
-		
+			/*폼 초기화 함수*/
+			function initform() {
+				// 폼양식 > 입력항목 이름
+				document.joinform.memberId.focus();
+				
+				// 폼양식 > 입력항목 id 
+				document.getElementById("memberId").focus();
+			}
+			
+			function clickReset() {
+				initForm();
+			}
+			
+			/* 입력양식 데이터 검증 이벤트 
+				1. 필수입력항목 : 아이디, 비밀번호, 비밀번호 확인
+					=> 입력항목객체.value
+			*/
+			function checkForm() {
+						
+				// 아이디 입력 데이터 가져오기 : id 기반
+				var memberId = document.getElementById("memberId").value;
+				console.log("memberId: ", memberId);
+				
+				if (memberId == "" || memberId.trim().length == 0) {
+					document.getElementById("memberId").focus();
+					document.getElementById("memberIdMsg").innerHTML = "아이디를 입력하세요";
+					document.getElementById("memberIdMsg").style.color = "red";
+					document.getElementById("memberId").value = ""; // 사용자가 입력한 데이터를 공백문자열 초기화
+					return false; // input type="submit"
+				}
+				memberId = memberId.trim(); // 사용자 입력데이터에 있는 공백 제거
+				console.log("memberId: ", memberId.length);
+				
+				
+				
+				
+				//비밀번호 입력 데이터 가져오기 : name 기반
+				var memberPw = document.getElementById("memberPw").value;
+				console.log("memberPw: ", memberPw);
+				
+				if (memberPw == "" || memberPw.trim().length == 0) {
+					document.getElementById("memberPw").focus();
+					document.getElementById("memberPwMsg").innerHTML = "비밀번호를 입력하세요";
+					document.getElementById("memberPwMsg").style.color = "red";
+					document.getElementById("memberPw").value = ""; // 사용자가 입력한 데이터를 공백문자열 초기화
+					return false; // input type="submit"
+				}
+				
+				memberPw = memberPw.trim(); // 사용자 입력데이터에 있는 공백 제거
+				console.log("memberPw: ", memberPw.length);
+				
+				
+				
+				// 비밀번호 확인 입력 데이터 가져오기 : 
+				var memberPwConfirm = document.getElementById("memberPwConfirm").value;
+				console.log("memberPw: ", memberPwConfirm);
+				
+				if (memberPwConfirm == "" || memberPwConfirm.trim().length == 0) {
+					document.getElementById("memberPwConfirm").focus();
+					document.getElementById("memberPwConfirmMsg").innerHTML = "비밀번호를 입력하세요";
+					document.getElementById("memberPwConfirmMsg").style.color = "red";
+					document.getElementById("memberPwConfirm").value = ""; // 사용자가 입력한 데이터를 공백문자열 초기화
+					return false; // input type="submit"
+				}
+				memberPwConfirm = memberPwConfirm.trim(); // 사용자 입력데이터에 있는 공백 제거
+				console.log("memberPwConfirm: ", memberPwConfirm.length);	
+				
+				// 비밀번호와 비밀번호확인 매칭 검증
+			}
+			
 		</script>
 		
 	</head>
@@ -29,36 +102,40 @@
 			취소전용버튼 : reset 
 			
 		 -->
-		 
+		 <div>
+		 	<form action="result.html" method="post" name="joinForm" id="joinForm">
 						<!-- 아이디 -->
 					<div class="">	
 						<div class="input_title">UserId</div> 
-						<input type="text" name="memberId" autofocus="autofocus">
+						<input type="text" name="memberId" id="memberId" autofocus="autofocus">
+						<span id="memberIdMsg"></span>
 					</div>		
 					
 					<!-- 비밀번호 -->
 					<div class="">	
-					<div class="input_title"> Password </div>
-					<input type="password" name="memberPw">
-					<label><input type="checkbox" > 비밀번호 보이기</label>
+						<div class="input_title"> Password </div>
+						<input type="password" name="memberPw" id="memberPw">
+						<span id="memberPwMsg"></span>
 					</div>
 				
 					<!-- 비밀번호 재입력 -->
 					<div class="">
-					<div class="input_title">Re Password</div> 
-					<input type="password" name="memberPw" >
+						<div class="input_title">Re Password</div> 
+						<input type="password" name="memberPwConfirm" id="memberPwConfirm">
+						<label><input type="checkbox" > 비밀번호 보이기</label>
+						<span id="memberPwConfirmMsg"></span>
 					</div>
 				
 					<!-- 이름 -->
 					<div class="input_row">
 					<div class="input_title">Name</div>
-					<input type="text" name="name"  >
+					<input type="text" name="name"  id="name" >
 					</div>
 				
 					<!-- 휴대폰 -->
 					<div class="input_row">
 					<div class="input_title"> Mobile </div>
-					<td><input type="tel" placeholder="000-0000-0000" name="mobile" ></td>
+					<td><input type="tel" placeholder="000-0000-0000" name="mobile" id="mobile"></td>
 					</div>
 				
 					<!-- 이메일 -->
@@ -94,8 +171,9 @@
 					</div>
 					
 					<!-- submit / reset -->
-					<input type="submit" value="회원가입" class="btn_submit normal"> 
-					<input type="submit" value="취소" class="btn_submit normal"> 
+					<input type="submit" value="회원가입" class="btn_submit normal" onClick="return checkForm();"> 
+					<input type="reset" value="취소" class="btn_submit normal" onClick="clickReset()"> 
 			</form>
+		</div>	
 	</body>
 </html>
