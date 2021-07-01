@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>JavaScript Form Valid</title>
+		<style type="text/css">
+			div {margin: 10px 0;}
+			div.input_title {font-size:12px; font-weight: bold; color:navy;}
+		</style>
+		
+		
+		<script type="text/javascript">
+			
+		
+		</script>
+		
+	</head>
+	<body>
+		<h3></h3>
+		<!-- 
+			form 입력양식 
+			아이디 : 텍스트
+			비밀번호/비밀번호확인 : 비밀번호 
+			비밀번호표시 : 체크박스 
+			이메일 : 이메일아이디/도메인주소/도메인선택 
+			관심분야:체크박스 항목 5개
+			자기소개 textarea 
+			확인전용버튼 :submit 
+			취소전용버튼 : reset 
+			
+		 -->
+		 
+						<!-- 아이디 -->
+					<div class="">	
+						<div class="input_title">UserId</div> 
+						<input type="text" name="memberId" autofocus="autofocus">
+					</div>		
+					
+					<!-- 비밀번호 -->
+					<div class="">	
+					<div class="input_title"> Password </div>
+					<input type="password" name="memberPw">
+					<label><input type="checkbox" > 비밀번호 보이기</label>
+					</div>
+				
+					<!-- 비밀번호 재입력 -->
+					<div class="">
+					<div class="input_title">Re Password</div> 
+					<input type="password" name="memberPw" >
+					</div>
+				
+					<!-- 이름 -->
+					<div class="input_row">
+					<div class="input_title">Name</div>
+					<input type="text" name="name"  >
+					</div>
+				
+					<!-- 휴대폰 -->
+					<div class="input_row">
+					<div class="input_title"> Mobile </div>
+					<td><input type="tel" placeholder="000-0000-0000" name="mobile" ></td>
+					</div>
+				
+					<!-- 이메일 -->
+					<div class="input_row">
+						<div class="input_title"> Email </div> 
+						<input type="email" > <input type="email" > 
+							<select> 
+								<option>직접 선택</option>
+								<option>google</option>
+								<option>naver</option>
+								<option>카카오</option>
+							</select>
+					</div>
+					
+					<!-- 관심분야 -->
+					<div>
+						<div class="input_title">관심분야</div>
+						<div>
+							<input type="checkbox" name="interest" value="1">자바
+							<input type="checkbox" name="interest" value="2">데이터베이스					
+							<input type="checkbox" name="interest" value="3">웹어플리케이션		
+							<input type="checkbox" name="interest" value="4">데이터분석	
+							<input type="checkbox" name="interest" value="5">화면디자인	
+						</div>
+					</div>
+					
+					<!-- 자기소개 -->
+					<div>
+						<div class="input_title">자기소개(200자 이내 입력)</div>
+						<div>
+							<textarea cols="60" rows="intro" name="intro"></textarea>					
+						</div>
+					</div>
+					
+					<!-- submit / reset -->
+					<input type="submit" value="회원가입" class="btn_submit normal"> 
+					<input type="submit" value="취소" class="btn_submit normal"> 
+			</form>
+	</body>
+</html>
