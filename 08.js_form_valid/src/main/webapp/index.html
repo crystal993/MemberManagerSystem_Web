@@ -18,11 +18,15 @@
 			/*폼 초기화 함수*/
 			function initform() {
 				// 폼양식 > 입력항목 이름
-				document.joinform.memberId.focus();
+				//document.joinform.memberId.focus();
 				
 				// 폼양식 > 입력항목 id 
 				document.getElementById("memberId").focus();
+				
+				// 이메일 도메인주소 읽기 전용 설정 
+				
 			}
+			
 			
 			function clickReset() {
 				initForm();
@@ -167,7 +171,38 @@
 					}
 				}
 			
-				function 
+				/* 관심분야 checkbox 전체 선택 
+					1. 관심분야 checkbox 객체 가져오기 : NodeList 
+					2. checkbox item 갯수만큼 반복 
+					3. checked 되어 있지 않으면 클릭 체크 (click())
+				
+				
+				*/		
+				function checkAll() {
+					var interestElement = document.joinForm.interest;
+					
+					for(index = 0; index< interestElement.length; index++){
+						if(!interestElement[index].checked) {
+							interestElement[index].click();
+						}
+					}
+
+				}
+				
+				/* 관심분야 checkbox 전체 해제 
+					1. 관심분야 checkbox 객체 가져오기 : NodeList 
+					2. checkbox item 갯수만큼 반복 
+					3. checked 되어 있으면 클릭 체크 해제 (click())
+				*/
+				function clearAll() {
+					var interestElement = document.joinForm.interest;
+					
+					for(index = 0; index< interestElement.length; index++){
+						if(interestElement[index].checked) {
+							interestElement[index].click();
+						}
+					}
+				}
 		</script>
 		
 	</head>
@@ -190,7 +225,7 @@
 						<!-- 아이디 -->
 					<div class="">	
 						<div class="input_title">UserId</div> 
-						<input type="text" name="memberId" id="memberId" autofocus="autofocus">
+						<input type="text" name="memberId" id="memberId" autofocus="autofocus" maxlength="5">
 						<span id="memberIdMsg"></span>
 					</div>		
 					
@@ -239,13 +274,15 @@
 					<div>
 						<div class="input_title">관심분야</div>
 						<div>
-							<input type="button" name="allSelect" name="allSelect" value="전체선택" onClick = "allSelect()">
-							<input type="button" name="allSelectReset" name="allSelectReset" value="전체선택해제" onClick = "allSelectReset()">
 							<input type="checkbox" name="interest" value="1">자바
 							<input type="checkbox" name="interest" value="2">데이터베이스					
 							<input type="checkbox" name="interest" value="3">웹어플리케이션		
 							<input type="checkbox" name="interest" value="4">데이터분석	
 							<input type="checkbox" name="interest" value="5">화면디자인	
+						</div>
+						<div>
+							<input type="button" name="allSelect" name="allSelect" value="전체선택" onClick = "checkAll()">
+							<input type="button" name="allSelectReset" name="allSelectReset" value="전체해제" onClick = "clearAll()">
 						</div>
 					</div>
 					
