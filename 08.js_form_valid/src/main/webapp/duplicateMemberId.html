@@ -3,6 +3,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>아이디중복</title>
+<style type="text/css">
+	div { margin: 10px 0;}
+</style>
+
+<script type="text/javascript">
+	window.onload = function() {
+		//부모창의 아이디 객체 가져오기 
+		var parentMemberIdElement = window.opener.document.getElementById("memberId");
+		//자식창의 아이디 객체 가져오기
+		var childMemberIdElement = document.getElementById("memberId");
+		childMemberIdElement.value = parentMemberIdElement.value;
+		
+		childMemberIdElement.focus();
+		
+	}
+</script>
+
 </head>
 <body>
 <h3>아이디 중복</h3>
@@ -15,4 +32,23 @@
 	5. 창닫기 확인버튼 
 -->
 </body>
+
+	<form action="result.html" method="post" name="idCheckForm" id="idCheckForm">
+		<!-- 아이디 -->
+		<div>	
+			<div class="input_title">UserId</div>
+			<div>
+				<input type="text" name="memberId" id="memberId" autofocus="autofocus">
+				<input type="button" name="" value="아이디 중복 확인">
+			</div> 
+			<div id="memberIdMsg">메시지 출력 영역</div>
+		</div>		
+		
+		<!-- submit / reset -->
+		<div>
+			<input type="button" value="아이디중복 확인"  onClick="return checkForm();"> 
+			<input type="button" value="창닫기"  onClick="window.close()">
+		</div>
+		 
+	</form>
 </html>

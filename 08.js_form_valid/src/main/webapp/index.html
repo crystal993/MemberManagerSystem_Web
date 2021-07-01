@@ -208,6 +208,12 @@
 					var introLengthElement = document.getElementById("introLength");
 					introLengthElement.innerHTML = takeData.length;
 				}
+				
+				/*아이디 중복확인 새창열기 */
+				function openIdCheckWindow() {
+					var specs = "width=400,height=300,top=200,left=300"
+					var idWin = window.open("duplicateMemberId.html","_blank", specs)
+				}
 		</script>
 		
 	</head>
@@ -231,7 +237,7 @@
 					<div>	
 						<div class="input_title">UserId</div> 
 						<input type="text" name="memberId" id="memberId" autofocus="autofocus" maxlength="5">
-						<input type="button" name="" value="아이디 중복">
+						<input type="button" name="" value="아이디 중복" onClick="openIdCheckWindow()">
 						<span id="memberIdMsg"></span>
 					</div>		
 					
