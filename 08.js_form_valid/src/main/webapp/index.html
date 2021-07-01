@@ -83,6 +83,12 @@
 				console.log("memberPwConfirm: ", memberPwConfirm.length);	
 				
 				// 비밀번호와 비밀번호확인 매칭 검증
+				if (memberPw != memberPwConfirm) {
+					document.getMemberId("memberPw").focus();
+					document.getMemberId("memberPwMsg").innerHTML = "비밀번호와 비밀번호 확인이 동일하지 않습니다.";
+					document.getMemberId("memberPwMsg").style.color="red";
+					return false; // input type="submit"
+				}
 			}
 			
 		</script>
