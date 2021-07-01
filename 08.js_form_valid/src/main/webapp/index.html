@@ -89,6 +89,8 @@
 					document.getMemberId("memberPwMsg").style.color="red";
 					return false; // input type="submit"
 				}
+				
+				
 			}
 				/*	비밀번호 표시: 보이기 / 감추기 이벤트
 					1. 비밀번호표시 체크박스 객체 가져오기
@@ -113,7 +115,59 @@
 						memberPwConfirmElement.type = "password";
 					}
 				}
+				
+				
+						
+				/* 
+				이메일 도메인을 선택하면 해당 도메인 주소를 이메일 주소로 자동 초기화 
+					-- select 
+							>> onchange 
+							>> <option> 네이버 </option>
+							>> <option value="@naver.com"> 네이버 </option>
+							
+					-- 읽기전용 : readOnly
+						<input type="text" readOnly> => 4.0에서만 가능함. 
+						<input type="text" readOnly="readOnly"> => 속성의 값을 얘로 넣어주기
+				*/	
+				
+				
+				function emailOnChange() {
+					var email1 = document.getElementById("email1").value;
+					var emailElement2 = document.getElementById("email2");
+					var emailSelectElement = document.getElementById("emailSelect");
+					var emailSelectMsgElement = document.getElementById("emailSelectMsg");
+					
+					if (email1 == "" || email1.trim().length == 0) {
+						document.getElementById("email1").focus();
+						document.getElementById("emailSelectMsg").innerHTML = "이메일 아이디를 입력하시기 바랍니다.";
+						document.getElementById("emailSelectMsg").style.color = "red";
+						document.getElementById("email1").value = ""; // 사용자가 입력한 데이터를 공백문자열 초기화
+						return false; // input type="submit"
+					}
+					else{
+						document.getElementById("emailSelectMsg").innerHTML = "";
+					}
+					
+					
+					if(emailSelectElement.value == "") {
+						emailElement2.readOnly = "readOnly";
+						emailElement2.style.backgroundColor="skyblue";
+						emailSelectElement.value = "";
+						emailElement2.focus();
+						
+					} else {
+						emailElement2.value = emailSelectElement.value;
+						emailElement2.readOnly = "readOnly";
+						emailElement2.style.backgroundColor="skyblue";
+						emailElement2.focus();
+					}
+					
+					if(emailElement2.redOnly == "readOnly"){
+						emailElement2.style.backgroundColor="skyblue";
+					}
+				}
 			
+				function 
 		</script>
 		
 	</head>
@@ -170,19 +224,23 @@
 					<!-- 이메일 -->
 					<div class="input_row">
 						<div class="input_title"> Email </div> 
-						<input type="email" > <input type="email" > 
-							<select> 
-								<option>직접 선택</option>
-								<option>google</option>
-								<option>naver</option>
-								<option>카카오</option>
+						<input type="text" id="email1"  name="email1"> <input type="text" id="email2"  name="email2" > 
+							<select onchange="emailOnChange()" id="emailSelect" name="emailSelect"> 
+								<option value="">직접 선택</option>
+								<option value="@google.com">google</option>
+								<option value="@naver.com">naver</option>
+								<option value="@kakao.com">카카오</option>
+								<option value="@">직접 입력</option>
 							</select>
+							<span id="emailSelectMsg"></span>
 					</div>
 					
 					<!-- 관심분야 -->
 					<div>
 						<div class="input_title">관심분야</div>
 						<div>
+							<input type="button" name="allSelect" name="allSelect" value="전체선택" onClick = "allSelect()">
+							<input type="button" name="allSelectReset" name="allSelectReset" value="전체선택해제" onClick = "allSelectReset()">
 							<input type="checkbox" name="interest" value="1">자바
 							<input type="checkbox" name="interest" value="2">데이터베이스					
 							<input type="checkbox" name="interest" value="3">웹어플리케이션		
